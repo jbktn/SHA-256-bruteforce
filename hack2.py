@@ -62,10 +62,7 @@ def brute_force(charset, password, repeat):
 
 
 if __name__ == "__main__":
-    original = input("Password to find: ")
-    passwd = hashlib.sha256(original.encode("utf-8")).hexdigest()
-    print("Hashed password: ", passwd)
-    '''passwd = input("Enter hash: ")'''
+    passwd = input("Enter hash: ")
     mode = int(input("1 - digits\n2 - alpha\n3 - simple\n4 - extended\n"))
     if mode == 1:
         brute_force(digits, passwd, 10)
